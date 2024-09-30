@@ -20,6 +20,8 @@ answer = all_evens1(1000, 3000)
 print(answer)
 
 # Better version with lots of clever things going on
+# This uses modulo 10 to strip off the last digit
+# It also uses // which is floor division to take all numbers but the last
 
 
 def all_evens2(start, end):

@@ -9,7 +9,9 @@
 # The output of the program should be:
 # 18,22,24
 
+
 import math
+
 
 def formula_thing(nums):
     c = 50
@@ -23,6 +25,7 @@ def formula_thing(nums):
     answer = ",".join(values)
 
     return answer
+
 
 formula_thing("100,150,180")
 

@@ -1,3 +1,6 @@
+
+# This is just remembering how to create a class in python
+
 class GetString(object):
     def __init__(self):
         self.s = "Dog"
