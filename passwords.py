@@ -23,4 +23,4 @@ def check_passwords(str):
     return final_list
 
 
-print(check_passwords("aA3$$aA3, yes, ZZk99$$"))
+print(check_passwords("these_are_fake, yes_they_are, just_practicing, AaBb00$$"))
