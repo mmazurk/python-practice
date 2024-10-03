@@ -2,26 +2,28 @@
 # D 100
 # W 200
 
-def banking(transaction_list):
+# REFACTORED
+
+def banking(transaction_list: list[str]) -> int:
     """its like banking except not"""
     total_balance = 0
 
     for item in transaction_list:
-        amount = int(item[2::1])
-        if item[0] == "D":
+        transaction = item.split(" ")
+        if len(transaction) != 2:
+            return "Invalid transaction format"
+
+        action, amount = transaction[0], int(transaction[1])
+        if action == "D":
             total_balance += amount
-        elif item[0] == "W":
+        elif action == "W":
             total_balance -= amount
         else:
-            return "error code 32"
+            return "Ohhhh noooooo"
 
     return total_balance
 
 
 transactions = ["D 500", "D 500", "W 200", "W 200", "D 1000"]
 balance = banking(transactions)
-
-if isinstance(balance, str):
-    print("OH NO! ERROR CODE 32")
-else:
-    print(f"Your balance sir, is ${balance}")
+print(balance)
