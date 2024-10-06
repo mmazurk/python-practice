@@ -5,7 +5,7 @@
 def doMath(function, value): return function(value)
 
 
-def complexMath(val):
+def complexMath(val: int) -> int:
     for i in range(1, 5):
         val *= i
     return val
